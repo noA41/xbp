@@ -2,18 +2,47 @@
 <html lang="jp">
 <head>
     <meta charset="UTF-8">
-    <title>第十三回</title>
+    <title>第一回</title>
     <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
     <logotohome>
-    <h1>第十三回課題</h1>
+    <h1>第一回課題</h1>
     <div>
-        <h3>最終課題－マスクはファッション足り得るか？</h3><br>
-        <a href="files/最終課題.pdf" target="_blank">スライド</a><br>
-        <a href="files/最終課題レジュメ.pdf" target="_blank">内容レジュメ</a>
+        <h3>arduinoの条件指定Lチカ</Label></h3><br>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">void setup() {</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;// put your setup code here, to run once:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;Serial.begin(9600);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;pinMode(13,OUTPUT);</li>
+            <li style="background-color:#EFF;">}</li>
+            <li style="background-color:#EEF;">//ここで使うピンを指定、OUTPUT(電流を流す) or INPUT(データの取得等)</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">void loop() {</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;// put your main code here, to run repeatedly:</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;int val=0;</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;val=analogRead(1);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;Serial.println(val);</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;delay(500);</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">if(val&lt;200){</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(13,LOW);</li>
+            <li style="background-color:#EFF;">}else{</li>
+            <li style="background-color:#EEF;">　digitalWrite(13,HIGH);</li>
+            <li style="background-color:#EFF;">}</li>
+            <li style="background-color:#EEF;">//値が200以下ならを電流を流さない、そうでなければ流す</li>
+            <li style="background-color:#EFF;">}</li>
+            </ol></code>
     </div>
-
+    <div>
+        <h3>感情リストアップ</h3>
+        <ul>
+            <li>定期を忘れて往復8000円程自腹した。つらい。</li>
+            <li>スタバで何かを飲食した時。幸せ。</li>
+            <li>曲の分析をしている時。楽しい。</li>
+        </ul>
+    </div>
 
 </body>
 </html>
